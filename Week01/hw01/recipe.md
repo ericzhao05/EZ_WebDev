@@ -25,7 +25,6 @@ A classic recipe for a perfectly cooked steak with a golden-brown crust, infused
     - Medium Rare (145°F)
     - Medium (160°F)
     - Well Done (170°F)
-
 9. Remove the steak from the pan and let it rest for 5–8 minutes before slicing.
 
 

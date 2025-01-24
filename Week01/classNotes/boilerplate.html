@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Use "cmd + /" to create a command -->
+    <!-- this specifies the character set encoding.
+     without this tag our fonts might not load properly -->
+    <meta charset="utf-8" />
+    <!-- the viewport tag sets the initial scale and ensures
+     proper responsive behavior -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The title tag shows up in the browser tab and as the big blue link in search results -->
+    <title>HTML Boilerplate</title>
+    
+    <style>
+      /* we are writing CSS in <style></style> (it is not longer HTML) */
+      /* tag selector = any p tag will get these  */
+
+      /* class selectors alwyas begin with . */
+      /* the style get applied whereever ... */
+      .nyu_text {
+        color: blueviolet;
+      }
+
+      /* IS selector alwyas strat with #. IDs are unique, cannot be reused */
+      #top{
+        color: cornflowerblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- everything inside the body tag shows up to the user unless
+     modified to not be visible with css -->
+
+    <!-- ONLY 1 H1 per page -->
+    <h1 id="top">Heading 1 is the most important text on the page. Only one per page.</h1>
+    <h2>
+      As the heading numbers get bigger, the text gets smaller. 
+      All still blodish weight, and they are all more importnt than any other text tags
+    </h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <!-- horizontal rule aka page divider -->
+    <hr />
+    <!-- Most text will likely be p text -->
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Praesent 
+      lobortis pulvinar risus, efficitur malesuada tellus mattis ac. Integer 
+      in tellus ultrices, tincidunt tellus a, placerat massa. Pellentesque 
+      suscipit sed elit a faucibus. Praesent feugiat neque et tellus ornare 
+      gravida. Morbi non aliquet massa. Proin ut turpis eros. Suspendisse vitae 
+      mollis lorem. Vivamus rhoncus leo accumsan libero rutrum varius. Praesent 
+      ut ex in tellus faucibus semper at nec urna. Cras euismod ornare lacinia.
+    </p>
+    <p>
+    Nulla dapibus tincidunt tellus, sit amet ultrices massa placerat at. 
+    Donec luctus aliquet dui vitae maximus. Ut sodales erat ex, in 
+    scelerisque sem porttitor ut. <span style="color: magenta">Lorem ipsum dolor</span> sit amet, consectetur 
+    adipiscing elit. Nulla fringilla at nisl quis laoreet. Aliquam non nibh 
+    vel elit pellentesque ornare ut in turpis. Interdum et malesuada fames 
+    ac ante ipsum primis in faucibus. In pellentesque magna sit amet ipsum 
+    placerat, vel commodo neque porttitor. Sed sed suscipit neque.
+    </p>
+    <p class="nyu_text">
+    <a 
+      href="https://en.wiktionary.org/wiki/duis"
+      target = "_blank">
+      <!-- if traget = "_self" then it will not open a new tab -->
+       <!-- if traget = "_self" then it will open a new tab -->
+    Duis
+    </a> 
+    <em>dapibus non dui vel maximus. Curabitur a risus bibendum, consequat 
+    enim in, tempor velit.</em> <strong>Nunc porttitor suscipit enim, nec tempus nulla 
+    convallis vitae. Donec in dolor elementum, condimentum velit in, bibendum 
+    dolor. Vivamus consectetur mi id eleifend cursus. Donec rhoncus fermentum 
+    bibendum. Orci varius natoque penatibus et magnis dis parturient montes, 
+    nascetur ridiculus mus. Phasellus ultricies ex quis finibus ultricies. 
+    Aliquam in justo ex. Vestibulum tempor velit sed dictum rhoncus. Nunc 
+    hendrerit orci lacus, et placerat tellus ultricies vel.</strong>
+    </p>
+
+    <h2>Seared Steak</h2>
+
+    <p>A description of Steak</p>
+
+    <!-- This is an iamge loaded from an external URL -->
+     <!-- either change witdth or height. Do not change both because it will be out of ratio. -->
+    <img 
+      src = "https://natashaskitchen.com/wp-content/uploads/2020/03/Pan-Seared-Steak-4.jpg"
+      alt = "This is an image of a steared Steak with garlic, rosemary, and butter"
+      width="600px"
+      
+    />
+  
+    <!-- This is  an image loaded from same directory as HTML file -->
+     <img
+      src = "Steak_Image.jpg"
+      alt = "This is an image of a steared Steak with garlic, rosemary, and butter"
+     />
+
+    <!-- This is  an image loaded from a folder within the project -->
+    <img
+    src = "image/Steak_Image.jpg"
+    alt = "This is an image of a steared Steak with garlic, rosemary, and butter"
+    />
+
+    <ul>
+      <li>Ribeye Steak (0.5-1kg)</li>
+      <li>Salt (to taste) </li>
+      <li>Black Pepper (to taste) </li>
+      <li>Olive Oil (1/2 Teaspoon)</li>
+      <li>Butter (2–3 tablespoons)</li>
+      <li>Garlic (2–3 cloves, smashed or halved) </li>
+      <li>Rosemary (1-2 sprigs)</li>
+    </ul>
+
+    <ol>
+      <li>Remove the steak from the fridge 30 minutes 
+        before cooking to allow it to reach room temperature. 
+        This helps the steak cook evenly.</li>
+      <li>Season the steak generously on both sides with 
+        salt and freshly ground black pepper.</li>
+      <li>Dry with kitchen paper to remove any excess liquid</li>
+      <li>Heat a pan over high heat. 
+        Add the olive oil once the pan is hot.</li>
+      <li>Once the oil is heated, sear the edges of 
+        the steak for 45–60 seconds per edge.</li>
+      <li>Lay the steak flat in the pan and sear 
+        one side for 3–4 minutes until a golden-brown 
+        crust forms. </li>
+      <li>Flip the steak and reduce the heat to medium. 
+        Add the butter, garlic, and rosemary to the pan.</li>
+        <li>Cook the steak until the internal temperature 
+          reaches your desired doneness:
+          - Medium Rare (145°F)
+    - Medium (160°F)
+    - Well Done (170°F)
+        </li>
+        <li>Remove the steak from the pan and let it rest 
+          for 5–8 minutes before slicing.</li>
+    </ol>
+
+    <hr />
+
+    <ul>
+      <li>Ribeye Steak (0.5-1kg)</li>
+      <li>Salt (to taste) </li>
+      <li>
+        anything
+        <ol>
+          <li>sublist1</li>
+          <li>sublist2</li>
+          <li>sublist3</li>
+        </ol>
+      </li>
+      <li>Olive Oil (1/2 Teaspoon)</li>
+      <li>Butter (2–3 tablespoons)</li>
+      <li>Garlic (2–3 cloves, smashed or halved) </li>
+      <li>Rosemary (1-2 sprigs)</li>
+    </ul>
+
+    <ol></ol>
+      <li>Remove the steak from the fridge 30 minutes 
+        before cooking to allow it to reach room temperature. 
+        This helps the steak cook evenly.</li>
+      <li>Season the steak generously on both sides with 
+        salt and freshly ground black pepper.</li>
+      <li>Dry with kitchen paper to remove any excess liquid</li>
+      <li>Heat a pan over high heat. 
+        Add the olive oil once the pan is hot.</li>
+      <li>Once the oil is heated, sear the edges of 
+        the steak for 45–60 seconds per edge.</li>
+      <li>Lay the steak flat in the pan and sear 
+        one side for 3–4 minutes until a golden-brown 
+        crust forms. </li>
+      <li>Flip the steak and reduce the heat to medium. 
+        Add the butter, garlic, and rosemary to the pan.</li>
+        <li>Cook the steak until the internal temperature 
+          reaches your desired doneness:
+          <ul>
+            <li>Medium Rare (145°F)</li>
+            <li>Medium (160°F)</li>
+            <li>Well Done (170°F)</li>
+          </ul>
+        </li>
+        <li>Remove the steak from the pan and let it rest 
+          for 5–8 minutes before slicing.</li>
+    </ol>
+
+
+    <a href="#top">Back to top</a>
+
+  </body>
+</html>
