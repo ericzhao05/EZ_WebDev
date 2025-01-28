@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML Forms</title>
+  </head>
+
+  <body>
+    <h1>HTML Form Elements</h1>
+    <!-- From using basic input types -->
+    <p>
+      The form action usually contains a file or link 
+      to process the form fields once the user clicks submit.
+    </p>
+    <p>
+      For now, the main from attribute to worry about is the method. <br />
+      <a href="https://www.w3schools.com/tags/att_form_method.asp" target="_blank">See w3 school</a>
+    </p>
+    <form
+    action="create_profile.js"
+    name="user_create"
+    target="_self"
+    method="GET"
+    >
+    <!-- fieldsets are for grouping input elements, 
+     they are labeled by the legent tag within it-->
+      <fieldset>
+        <legend>Simple Text Input</legend>
+        <p>This is your most basic text input. 
+          We change input types by changing the vlaue of the type attribute 
+        </p>
+        <!-- label for attribute should match input name attribute -->
+        <label for="first_name">First Name: </label>
+        <input type="text" name="first_name" disabled/>
+        <br />
+        <br />
+        <label for="last_name">Last Name: </label>
+        <input type="text" name="last_name" maxlength="10" placeholder="Smith"/>
+      </fieldset>
+
+      <fieldset>
+        <legend>Text Area</legend>
+        <label for="why_class">Why did you take this class?</label>
+        <br />
+        <textarea name="why_class" cols="50" rows="5" required></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Common input types</legend>
+        <label for="num_from_10_to_100">Enter a number between 10 and 100: </label>
+        <input type="number" name="num_from_10_to_100" min="10" max="100" step="0.001"/>
+        <br />
+        <label for="password">Password: </label>
+        <input type="password" name="password"/>
+        <br />
+        <label for="fav_color">Choose your favorite color</label>
+        <input type="color" name="fav_color">
+      </fieldset>
+
+      <fieldset>
+        <legend>Check Boxes</legend>
+        <p>
+          Check boxes all the user to select more than one optin at once.
+          All grouped checkbox inputs share the <em>same name but different values</em>.
+        </p>
+        <p>
+          What pets do you have?
+        </p>
+        <input type="checkbox" name="pet" value="dog"><label>Dog</label>
+        <input type="checkbox" name="pet" value="cat"><label>Cat</label>
+        <input type="checkbox" name="pet" value="fish"><label>Fish</label>
+        <input type="checkbox" name="pet" value="turtle"><label>Turtle</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Radio Fields</legend>
+        <p>
+          Radio fields allow the user to select only one option at a time.All
+          grouped radio inputs share the
+          <em>same name but different values.</em>
+        </p>
+        <p>Which pet is your favorite?</p>
+        <input type="radio" name="favorite_pet" value="dog" /><label>Dog</label>
+        <input type="radio" name="favorite_pet" value="cat" /><label>Cat</label>
+        <input type="radio" name="favorite_pet" value="chicken" /><label
+          >Chicken</label
+        >
+        <input type="radio" name="favorite_pet" value="lizard" /><label
+          >Lizard</label
+        >
+      </fieldset>
+
+      <fieldset>
+        <legend>Select Option Dropdown</legend>
+        <label for="state">Pick a State</label>
+        <select nam="state">
+          <option value="NY">New York</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NM">New Mexico</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Radio Fields</legend>
+        <p>Radio fields allow the user to select only one option at a time.
+          All grouped radio inputs share the <em>same name but different values.</em>
+        </p>
+        <p>
+          Which pet is your favorite?
+        </p>
+        <label>
+          <input type="radio" name="fav_pet" value="dog" />
+            <img src="img/IMG_6107.jpg"
+            alt="image of a dog"
+            width="200px"/>
+            <br />
+        </label>
+        <label>
+          <input type="radio" name="fav_pet" value="cat" />
+            <img src="img/cat_img.jpg"
+            alt="image of a cat"
+            width="200px"/>
+            <br />
+        </label>
+        <label>
+          <input type="radio" name="fav_pet" value="fish" />
+            <img src="img/pet-fish-betta.jpg"
+            alt="image of a fish"
+            width="200px"/>
+            <br />
+        </label>
+        <label>
+          <input type="radio" name="fav_pet" value="turtle" />
+            <img src="img/best-pet-turtle-and-tortoise.png"
+            alt="image of a turtle"
+            width="200px"/>
+            <br />
+          </label>
+      </fieldset>
+
+      <!-- making a submit buttom -->
+      <input type="button" value="submit" name="submit_profile_d" disabled />
+      <button title="This is a disabled submit buttom using the button tag" name="submit_profile">Create Profile</button>
+
+    </form>
+  </body>
+</html>
