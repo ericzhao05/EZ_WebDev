@@ -1,0 +1,11 @@
+I found this article really helpful in my process of making wireframes. 
+It explains important things to remember when making wireframes such as 
+labeling buttons and navigation clearly so users understand their purpose 
+without extra explanation. It focuses on keeping designs clear, simple, 
+and easy for users. One thing that stood out was finding the right amount
+of detail. If there is too much detail, it takes longer to make changes 
+and can slow things down. But if there is too little detail, people might 
+not understand the design clearly. It's important to include just enough 
+information so that changes are easy, and the design makes sense to everyone. 
+It also made it clear that wireframing helps people work together and share ideas.
+
