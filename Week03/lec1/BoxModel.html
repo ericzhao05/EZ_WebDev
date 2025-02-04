@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Navbar</title>
+
+    <style type="text/CSS">
+      *
+      {
+        /* Setting margin and padding is known as CSS rest */
+        margin: 0;
+        padding: 0;
+      }
+
+      body
+      {
+        font-family: fantasy;
+      }
+
+      header
+      {
+        background-color: #f6eee3;
+      }
+
+      /* this means I am looking for a nav tag with the 
+      id of 'mainNav' and then find a ul tag inside it */
+      nav#mainNav ul
+      {
+        /* remove all bullet points */
+        list-style-type: none;
+        overflow: hidden;
+        
+        /* Sicne we are using inline block, we need to zero out the font-size */
+        /* font-size: 0; */
+      }
+
+      #mainNav ul li
+      {
+        /* li displays block by default,
+        they want to take 100% width up and not share horizontal space */
+        display: inline-block;
+        font-size: 1rem;
+      }
+
+      li a{
+        display: block;
+        text-align: center;
+        width: 100px;
+        padding: 10px;
+        /* remove the default link styles */
+        text-decoration: none;
+        color: rgb(137, 83, 2)
+      }
+
+      li a:hover
+      {
+        background-color: white;
+        color: blue;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>
