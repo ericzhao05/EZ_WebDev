@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+html {
+    background-color: lightblue;
+}
+
+
+header {
+    text-align: center;
+    font-family: "Kaushan Script", serif;
+}
+
+header h1 {
+    color: rgb(54, 54, 100);
+    background-color: rgb(127, 127, 227);
+    font-size: 3rem;
+}
+
+
+
+/* Navigation Bar */
+nav#navBar {
+    list-style-type: none;
+    background-color: turquoise;
+    margin-bottom: 20px;
+}
+
+nav#navBar ul li {
+    display: inline-block;
+    font-size: 1rem;
+    position: relative;
+    padding: 10px;
+}
+
+nav#navBar ul li a{
+    display: block;
+    text-align: center;
+    width: 120px;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(137, 83, 2)
+}
+
+#navBar ul li a:hover {
+    background-color: aquamarine;
+    color: blue;
+}
+
+nav#navBar ul li:hover .dropdown {
+    display: block;
+    z-index: 1000;
+    width: 140px;
+
+}  
+
+nav#navBar ul li .dropdown {
+    display: none;
+    position: absolute; 
+    background-color: aquamarine;
+    list-style-type: none;
+    z-index: 1000;
+}
+
+nav#navBar ul li .dropdown li a {
+    width: 100px;     
+    padding: 10px 10px ; 
+    text-align: center; 
+    color: rgb(116, 102, 180);      
+}
+
+nav#navBar ul li .dropdown li a:hover {
+    background-color: #2fc3d3;
+    color: #1f36b9;
+  }
+
+  /* End Nav Bar */
+
+  /* Body */
+body {
+    font-family: "Kaushan Script", serif;
+}
+/* End Body */
+
+/* Figure */
+figure img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+figure figcaption {
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* End Figure */
+
+article .recipeName h2{
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+article .recipeName p{
+    display: inline-block;
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: aquamarine;
+    padding: 15px;
+}
+
+/* Edit bullet points */
+.Ingredients {
+    display: inline-block;
+    margin-left: 2rem;
+    list-style: initial;
+    margin-bottom: 20px;
+    background-color: turquoise;
+    position: relative;
+    padding: 60px;
+}
+.Ingredients h3{
+    display: inline-block;
+    padding: 10px;
+    background-color: turquoise;
+    position: absolute;
+    top: 10px; 
+    left: auto;
+}
+
+.Procedure {
+    display: inline-block;
+    margin-left: 2rem;
+    list-style: initial;
+    margin-bottom: 20px;
+    background-color: turquoise;
+    position: relative;
+    padding: 60px;
+}
+
+.Procedure h3{
+    display: inline-block;
+    padding: 10px;
+    background-color: turquoise;
+    position: absolute;
+    top: 10px; 
+    left: auto;
+
+}
+
+.socialMedia {
+    list-style-type: none;
+    background-color: aqua;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.socialMedia ul li {
+    display: inline-block;
+    font-size: 1rem;
+    position: relative;
+    padding: 10px;
+}
+
+.socialMedia ul li a{
+    display: block;
+    text-align: center;
+    width: 120px;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0)
+}
+
+.socialMedia ul li a:hover {
+    background-color: aquamarine;
+    color: rgb(0, 0, 0);
+}
+
+.backToTop {
+    text-align: center;
+}
+
+
