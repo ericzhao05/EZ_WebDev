@@ -60,7 +60,7 @@ nav#navBar ul li:hover .dropdown {
 nav#navBar ul li .dropdown {
     display: none;
     position: absolute; 
-    background-color: aquamarine;
+    background-color: rgb(54, 245, 181);
     list-style-type: none;
     z-index: 1000;
 }
