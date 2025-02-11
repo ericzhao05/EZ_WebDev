@@ -86,11 +86,15 @@ body {
 /* End Body */
 
 /* Figure */
-figure img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
+.imageGrid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 100%;     
+  }
+
+.imageGrid figure{
+  grid-column: 5;
+  justify-self: start;
 }
 
 figure figcaption {
@@ -116,13 +120,13 @@ article .recipeName p{
 
 /* Edit bullet points */
 .Ingredients {
-    display: inline-block;
-    margin-left: 2rem;
+    display: block;
     list-style: initial;
-    margin-bottom: 20px;
     background-color: turquoise;
     position: relative;
     padding: 60px;
+    width: 80%;
+    margin: 0 auto 20px;       
 }
 .Ingredients h3{
     display: inline-block;
@@ -134,13 +138,13 @@ article .recipeName p{
 }
 
 .Procedure {
-    display: inline-block;
-    margin-left: 2rem;
+    display: block;
     list-style: initial;
-    margin-bottom: 20px;
     background-color: turquoise;
     position: relative;
     padding: 60px;
+    width: 80%;
+    margin: 0 auto 20px;   
 }
 
 .Procedure h3{
@@ -173,7 +177,7 @@ article .recipeName p{
     width: 120px;
     padding: 10px;
     text-decoration: none;
-    color: rgb(0, 0, 0)
+    color: rgb(0, 0, 0);
 }
 
 .socialMedia ul li a:hover {
