@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JS Data Types</title>
+    <script type="text/javascript"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Press+Start+2P&display=swap');
+        /* .press-start-2p-regular {
+            font: 'Press Start 2P', system-ui;
+            font-weight: 400;
+            font: normal;
+        } */
+
+        /* CSS Variables Default */
+        :root {
+            --c-bg: #e2e8f0;
+            --c-text: #475579;
+            --c-bg-btm: #1e293b;
+            --c-btn-hover: #64748b;
+            --c-btn-text: #fafafc;
+            --ff-heading: 'Press Start 2P', system-ui;
+            --ff-body: 'Press Start 2P', system-ui;
+        }
+
+        /* Apply different IDs for different color themes */
+        /* Apply different IDs for different sections */
+        #green {
+        --c-bg: #a7f3d0;
+        --c-text: #065f46;
+        --c-bg-btn: #059669;
+        --c-btn-hover: #065f46;
+        --c-btn-text: #ecfdf5;
+        }
+
+        #blue {
+        --c-bg: #1e3a8a;
+        --c-text: #dbeafe;
+
+        }
+
+        /* Base Styles */
+        body {
+        font-family: Helvetica, Arial, sans-serif;
+        }
+        /* Base Styles */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            color: var(--c-text);
+            background-color: var(--c-bg);
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+        }
+
+        .label-lg {
+            font: 2rem;
+        }
+
+        .input-lg {
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            border: 1px solid gray;
+            margin-right: 2rem;
+        }
+
+        .message-area {
+            display: flex;
+            flex-direction: column;
+            margin-top: 2rem;
+            font-size: 2rem;
+        }
+
+        .message {
+            height: 16rem;
+            border-radius: 0.25rem;
+            padding: 1rem;
+        }
+
+        .button-bar {
+            display: flex;
+            flex-direction: row-reverse;
+            margin-top: 2rem;
+        }
+
+        .btn-dark {
+            width: 100%;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            background-color: var(--c-bg-btm);
+            color: var(--c-btn-text);
+            border: 1px solid var(--c-btn-text);
+        }
+
+        .btn-dark:hover {
+            background-color: var(--c-btn-hover);
+        }
+
+        body#tech {
+            font-family: var(--ff-heading);
+        }
+
+    </style>
+  </head>
+  <body id="tech">
+    <div class="container" id="green">
+        <h1>Get in Touch</h1>
+        <form action="https://formspree.io/f/xgvaelky" method="post">
+            <div class="row">
+                <label for="name" class="label-lg">Name: </label>
+                <input type="text" name="name" class="input-lg" required/>
+
+                <label for="email" class="label-lg">Email: </label>
+                <input type="email" name="email" class="input-lg" required/>
+            </div>
+
+            <div class="message-area">
+                <label for="message"> Leave us a message:</label>
+                <textarea 
+                    class="message" 
+                    name="message" 
+                    placeholder="Leave a comment or question here.">
+                </textarea>
+            </div>
+
+            <div class="button-bar">
+                <button class="btn-dark" type="submit">Send</button>
+            </div>
+            <input name="subject" type="hidden" value="New Submission from {{name}}" />
+        </form>
+    </div>
+  </body>
+</html>
