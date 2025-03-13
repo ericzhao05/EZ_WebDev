@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JS Data Types</title>
+    <script type="text/javascript">
+        // declare a variable
+        var myVar
+        // assign a value to that variable
+        myVar = '20'
+        // declare and assign all in one statement
+        var myVar2 = 15
+
+        // console.log(myVar)
+        // console.log(typeof myVar)
+        // // javascript will let you do weird things with numbers in strings
+        // console.log(myVar2 + myVar)
+        // console.log(myVar * myVar2)
+        // console.log(5 * 'forty 4')
+
+        var message = 'hello'
+        var recipient = 'world'
+        // string concatenation
+        console.log(message + recipient)
+        console.log(message * recipient) // error 
+
+        // When using *, /, -, or %, JavaScript converts strings to numbers instead:
+        // console.log(myVar2 * myVar); // 15 * 20 → 300
+        // console.log(myVar2 - myVar); // 15 - 20 → -5
+        // console.log(myVar2 / myVar); // 15 / 20 → 0.75
+        // console.log(myVar2 % myVar); // 15 % 20 → 15
+
+        // boolean
+        const isOn = false
+
+        // let is used when a value is going to change based on other conditions,
+        // or if we want to declare but not assign a value to a variable
+        let conditionalMessage
+
+        if (isOn == true) {
+            conditionalMessage = 'the lights are on'
+        } else {
+            conditionalMessage = 'The lights are off'
+        }
+
+        const myNum = 80
+        // template literals,
+        // notice by hitting return, we also get a carriage return in our logged message
+        const anotherMessage = `My favorite number is ${myNum}`
+        console.log(anotherMessage)
+
+        // declare and define a function
+        function printMessage() {
+            console.log('hello world')
+        }
+
+        // calling a function
+        printMessage()
+
+        const printMessage2 = () => {
+            console.log('hello world')
+        }
+
+        printMessage2()
+
+        function sumValues(a,b) {
+            return a + b
+        }
+
+        const newNumber = sumValues(3,4)
+        console.log(newNumber)
+
+        // const isOff = true
+    
+        let isOff = true
+
+        function swicthOnOff() {
+            if (isOff === true) {
+                alert(`isOff is currently ${isOff}. Switching to false now.`)
+                isOff = false
+            } else if (isOff === false) {
+                alert(`isOff is currently ${isOff}. Switching to true now.`)
+                isOff = true
+            }
+        }
+
+        swicthOnOff()
+
+        // loops and increments
+        function countN(n) {
+            for (var i = 1; i <= n; i++){
+                console.log(i)
+            }
+        }
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
