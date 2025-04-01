@@ -5,7 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>JS Math Methods</title>
     <script type="text/javascript">
+      // int
+      const x = 15
+      const y = 35
+      // float
+      let z
+      z = 10.5
       
+      // add +
+      // sub -
+      // mul *
+      // div /
+      // mod %
+      
+      let yn = Math.round(Math.random())
+      if (yn === 0) {
+        console.log(false)
+      } else {
+        console.log(true)
+      }
+
+      function randomNum(n) {
+        const rn = Math.round(n * Math.random())
+        return rn
+      }
+
+      function randNumRange(min, max){
+        const rn = Math.round(Math.random() * (max - min) + min)
+        return rn
+      }
+
+
 
     </script>
   </head>

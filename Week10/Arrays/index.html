@@ -4,7 +4,23 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Arrays</title>
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+      var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+      console.log(months);
+      console.log(months.length);
+
+      var lastMonth = months.pop();
+      console.log("The last month of the year is " + lastMonth);
+      console.log("The arrays length is now " + months.length + " because we removed the last item");
+
+      console.log(months[3]);
+
+      for (var i = 0; i < 10; i++) {
+        console.log(i);
+      };
+
+    </script>
   </head>
   <body></body>
 </html>
