@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JS Objects and JSON</title>
+    <script type="text/javascript">
+      // initialize a new object and store it as a variable named customer
+      const customer = {
+        name: 'Tony',
+        age: 23,
+        married: false,
+        pets: ['dog', 'cat', 'iguana'],
+        siblings: [
+          {name: 'Mary', age: 32, married: true},
+          {name: 'Billy', age: 16, married: false},
+        ],
+      }
+
+      // stringify converts any JS obj into JSON
+      const customerJSON = JSON.stringify(customer)
+      console.log(customerJSON)
+
+      // convert any JSON data received from a file or API call
+      const customerObject = JSON.parse(customerJSON)
+      console.log(customerObject)
+
+      // make our first API call using fetch
+      // whenever we use await flag inside of a function, we have to flag that function as async
+      async function logApiResults(){
+        // await = Dear JS please chill and wait for the Promise on the next
+        // line to resolve before moving with any other code here
+        // IOU a response, please wait till you get it
+        const response = await fetch(
+          "https://rickandmortyapi.com/api/character/2"
+        )
+
+        // this is how MDN gets an object out of a API response
+        const result = await(response.json())
+        console.log("RESULT", result)
+        return result
+      }
+
+      const myApiResult = {}
+      
+      // all log api results does is get the data, and return the result after logging
+      // we probably want to chain a bunch of stuff once we get our data,
+      // whenever theres potential to fail, we need a try catch
+      logApiResults().then((data) => {
+        myApiResult.data = data
+        const message = `${myApiResult.data.nma} is a ${myApiResult.data.species}`
+        console.log(message)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+    </script>
+  </head>
+  <body></body>
+</html>
