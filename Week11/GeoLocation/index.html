@@ -4,6 +4,61 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Geolocation</title>
+    <script type="text/javascript">
+      let loc
+      document.addEventListener("DOMContentLoaded", () => {
+        loc = document.getElementById('location')
+        getLocation()
+      })  
+
+      // function getLocation () {}
+      const getLocation = () => {
+        if (navigator.geolocation && navigator.geolocation.getCurrentPosition) {
+          navigator.geolocation.getCurrentPosition(setPosition, showError)
+        } else {
+          // this will fire if we don't have access to geolocation or the getCurrentPosition
+          
+          alert("Your browser either not support geolocation, OR you did not allow it.")
+        }
+      }
+
+      // once we call getCurrentPosition, it will pass a position object to setPosition since we passed that in as the callback function
+      const setPosition = (position) => {
+        console.log(position)
+        console.log(position.coords.latitude)
+        console.log(position.coords.longitude)
+        const lat = position.coords.latitude
+        const lon = position.coords.longitude
+
+        loc.innerHTML = `<p>Latitude: ${lat} <br /> Longitude: ${lon} </p>`
+      } 
+
+      const showError = (error) => {
+        // console.log("error", error)
+        switch(error.code){
+          case error.PERMISSION_DENIED:
+            loc.innerHTML = 'User denied the request for geolocation.'
+            break
+          case error.POSiTION_UNAVAILABLE:
+            loc.innerHTML = 'The location info is not available'
+            break
+          case error.TIMEOUT:
+            loc.innerHTML = "The location request timed out"
+            break
+          case error.UNKNOWN_ERROR:
+            loc.innerHTML = "unknown error"
+            break
+          default:
+            loc.innerHTML = "unknown error"
+            break
+        }
+      }
+
+    </script>
   </head>
-  <body></body>
+  <body>
+    <div id="location">
+      <p>Currently searching for location...</p>
+    </div>
+  </body>
 </html>
