@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Local Storage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" 
+          crossorigin="anonymous"
+    />
+    <style>
+        body {
+            transition: background-color 0.5s ease;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .color-display {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            max-width: 400px;
+            width: 100%;
+        }
+        
+        .current-color {
+            font-size: 1.5rem;
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+    </style>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", () => {
+            const newColor = generateRandomColor();
+            document.body.style.backgroundColor = newColor;
+            document.getElementById('current-color').textContent = newColor;
+            
+            document.getElementById('change-color-btn').addEventListener('click', () => {
+                changeBackgroundColor();
+            });
+            document.getElementById('rainbow-btn').addEventListener('click', () => {
+                runRainbowEffect();
+            });
+        });
+
+        function generateRandomNum(min, max) {
+            var rn = Math.round(Math.random() * (max - min) + min)
+            return rn
+        }
+
+        const generateRandomColor = () => {
+            const r = generateRandomNum(0, 255);
+            const g = generateRandomNum(0, 255);
+            const b = generateRandomNum(0, 255);
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+        
+        const changeBackgroundColor = () => {
+            const newColor = generateRandomColor();
+            document.body.style.backgroundColor = newColor;
+            document.getElementById('current-color').textContent = newColor;
+            return newColor;
+        }
+
+        const runRainbowEffect = () => {
+            document.getElementById('change-color-btn').disabled = true
+            document.getElementById('rainbow-btn').disabled = true
+            for (let i = 0; i < 10; i++) {
+                setTimeout(() => {
+                    changeBackgroundColor()
+                }, i * 300);
+            }
+            document.getElementById('change-color-btn').disabled = false
+            document.getElementById('rainbow-btn').disabled = false
+        }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+        <div class="color-display">
+            <h1>Background Color Changer</h1>
+            <div class="current-color" id="current-color">rgb(255, 255, 255)</div>
+            <div class="button-container">
+                <button id="change-color-btn" class="btn btn-primary btn-lg">Change Color</button>
+                <button id="rainbow-btn" class="btn btn-secondary btn-info btn-lg">Rainbow</button>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
+
