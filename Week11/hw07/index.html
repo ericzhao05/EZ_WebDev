@@ -57,7 +57,7 @@
         document.addEventListener("DOMContentLoaded", () => {
             const newColor = generateRandomColor();
             document.body.style.backgroundColor = newColor;
-            document.getElementById('current-color').textContent = newColor;
+            document.getElementById('current-color').innerHTML = newColor;
             
             document.getElementById('change-color-btn').addEventListener('click', () => {
                 changeBackgroundColor();
